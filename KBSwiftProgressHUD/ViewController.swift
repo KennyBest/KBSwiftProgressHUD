@@ -32,15 +32,18 @@ class ViewController: UIViewController {
             timer = nil
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(refreshRingView), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(refreshRingView), userInfo: nil, repeats: true)
         timer?.fire()
         
     }
 
-    //TODO- 这里有一个问题   判断self.progressRingView?.strokeEnd != CGFloat(1.0) 为什么无效
+    //TODO: 这里有一个问题   判断self.progressRingView?.strokeEnd != CGFloat(1.0) 为什么无效 反而 Float(self.progressRingView!.strokeEnd) != 1.0这样可以
+    
     func refreshRingView() -> Void {
     
-        guard self.progressRingView?.strokeEnd != CGFloat(1.0) else {
+        guard Float(self.progressRingView!.strokeEnd) != 1.0 else {
+            let tmp = Float(self.progressRingView!.strokeEnd)
+            print("current strokeEnd is : \(tmp)")
             self.timer?.invalidate()
             self.timer = nil
             CATransaction.begin()

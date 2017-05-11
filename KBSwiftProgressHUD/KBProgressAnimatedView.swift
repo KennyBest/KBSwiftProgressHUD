@@ -18,6 +18,7 @@ class KBProgressAnimatedView: UIView {
         }
     }
     
+    //TODO: 这里ringAnimatedLayer想置为nil时该如何设置，因为像OC中直接设置nil的时候会报错。
     var radius: CGFloat = 40.0 {
         didSet {
 //            self.ringAnimatedLayer.removeFromSuperlayer()
