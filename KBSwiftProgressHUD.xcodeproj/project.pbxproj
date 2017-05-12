@@ -13,6 +13,7 @@
 		4E60EB081EC458F300A466ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E60EB071EC458F300A466ED /* Main.storyboard */; };
 		4E60EB0B1EC458FB00A466ED /* KBProgressAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EB091EC458FB00A466ED /* KBProgressAnimatedView.swift */; };
 		4E60EB0C1EC458FB00A466ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EB0A1EC458FB00A466ED /* ViewController.swift */; };
+		4EF89B981EC553580099E867 /* KBIndefiniteAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF89B971EC553580099E867 /* KBIndefiniteAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4E60EB071EC458F300A466ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4E60EB091EC458FB00A466ED /* KBProgressAnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBProgressAnimatedView.swift; sourceTree = "<group>"; };
 		4E60EB0A1EC458FB00A466ED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EF89B971EC553580099E867 /* KBIndefiniteAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBIndefiniteAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4E60EAFC1EC4586400A466ED /* Assets.xcassets */,
 				4E60EAFE1EC4586400A466ED /* LaunchScreen.storyboard */,
 				4E60EB011EC4586400A466ED /* Info.plist */,
+				4EF89B971EC553580099E867 /* KBIndefiniteAnimationView.swift */,
 			);
 			path = KBSwiftProgressHUD;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E60EB0C1EC458FB00A466ED /* ViewController.swift in Sources */,
+				4EF89B981EC553580099E867 /* KBIndefiniteAnimationView.swift in Sources */,
 				4E60EAF61EC4586300A466ED /* AppDelegate.swift in Sources */,
 				4E60EB0B1EC458FB00A466ED /* KBProgressAnimatedView.swift in Sources */,
 			);
@@ -300,6 +304,7 @@
 				4E60EB061EC4586400A466ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

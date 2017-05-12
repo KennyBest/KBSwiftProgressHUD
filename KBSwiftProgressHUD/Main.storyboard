@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KBProgressHUD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KBSwiftProgressHUD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,16 +32,41 @@
                                     <action selector="clickStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="an1-uu-MOm"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XUR-m2-AsR">
+                                <rect key="frame" x="14" y="108" width="174" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXm-ri-sZC">
+                                <rect key="frame" x="237" y="108" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="clickShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzB-9N-7JI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIk-q1-ISF">
+                                <rect key="frame" x="305" y="108" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="clickDismissButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPV-rQ-9F3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XUR-m2-AsR" firstAttribute="centerY" secondItem="KXm-ri-sZC" secondAttribute="centerY" id="AWN-r5-Ebi"/>
                             <constraint firstItem="UgM-cE-EGq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="IFn-PF-Uhi"/>
+                            <constraint firstItem="KXm-ri-sZC" firstAttribute="leading" secondItem="XUR-m2-AsR" secondAttribute="trailing" constant="51" id="Tl6-ah-D4N"/>
                             <constraint firstItem="UgM-cE-EGq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UBJ-fl-M2T"/>
+                            <constraint firstItem="KXm-ri-sZC" firstAttribute="centerY" secondItem="OIk-q1-ISF" secondAttribute="centerY" id="Ymy-GT-wHU"/>
+                            <constraint firstItem="XUR-m2-AsR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fTx-cD-4nr"/>
+                            <constraint firstItem="OIk-q1-ISF" firstAttribute="leading" secondItem="KXm-ri-sZC" secondAttribute="trailing" constant="30" id="l0G-fe-cgR"/>
+                            <constraint firstItem="OIk-q1-ISF" firstAttribute="top" secondItem="UgM-cE-EGq" secondAttribute="bottom" constant="38" id="l72-iC-22l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OIk-q1-ISF" secondAttribute="trailing" id="va4-RG-LjM"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>

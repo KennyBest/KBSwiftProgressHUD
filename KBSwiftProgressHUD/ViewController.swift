@@ -11,6 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     var progressRingView: KBProgressAnimatedView?
+    lazy var indefiniteAnimationView: KBIndefiniteAnimationView = {
+        
+        let view = KBIndefiniteAnimationView(frame: CGRect(x: 10, y: 150, width: 100, height: 100))
+        view.backgroundColor = .white
+        view.radius = 40.0
+        view.strokeThickness = 2
+        view.strokeColor = UIColor.red
+        
+        return view
+    }()
+    
     var timer: Timer?
     
     override func viewDidLoad() {
@@ -34,9 +45,21 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(refreshRingView), userInfo: nil, repeats: true)
         timer?.fire()
-        
     }
 
+    @IBAction func clickShowButton(_ sender: Any) {
+        self.indefiniteAnimationView = KBIndefiniteAnimationView(frame: CGRect(x: 10, y: 150, width: 100, height: 100))
+        self.indefiniteAnimationView.backgroundColor = .white
+        self.indefiniteAnimationView.radius = 40.0
+        self.indefiniteAnimationView.strokeThickness = 2
+        self.indefiniteAnimationView.strokeColor = UIColor.red
+        view.addSubview(self.indefiniteAnimationView)
+    }
+    
+   
+    @IBAction func clickDismissButton(_ sender: Any) {
+        self.indefiniteAnimationView.removeFromSuperview()
+    }
     //TODO: 这里有一个问题   判断self.progressRingView?.strokeEnd != CGFloat(1.0) 为什么无效 反而 Float(self.progressRingView!.strokeEnd) != 1.0这样可以
     
     func refreshRingView() -> Void {
