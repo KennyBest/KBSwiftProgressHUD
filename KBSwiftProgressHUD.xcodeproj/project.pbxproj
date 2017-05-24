@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4391671ED555F800F28A82 /* KBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4391661ED555F800F28A82 /* KBProgressHUD.swift */; };
 		4E60EAF61EC4586300A466ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60EAF51EC4586300A466ED /* AppDelegate.swift */; };
 		4E60EAFD1EC4586400A466ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E60EAFC1EC4586400A466ED /* Assets.xcassets */; };
 		4E60EB001EC4586400A466ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E60EAFE1EC4586400A466ED /* LaunchScreen.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E4391661ED555F800F28A82 /* KBProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBProgressHUD.swift; sourceTree = "<group>"; };
 		4E60EAF21EC4586300A466ED /* KBSwiftProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KBSwiftProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E60EAF51EC4586300A466ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E60EAFC1EC4586400A466ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				4E60EAFE1EC4586400A466ED /* LaunchScreen.storyboard */,
 				4E60EB011EC4586400A466ED /* Info.plist */,
 				4EF89B971EC553580099E867 /* KBIndefiniteAnimationView.swift */,
+				4E4391661ED555F800F28A82 /* KBProgressHUD.swift */,
 			);
 			path = KBSwiftProgressHUD;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E4391671ED555F800F28A82 /* KBProgressHUD.swift in Sources */,
 				4E60EB0C1EC458FB00A466ED /* ViewController.swift in Sources */,
 				4EF89B981EC553580099E867 /* KBIndefiniteAnimationView.swift in Sources */,
 				4E60EAF61EC4586300A466ED /* AppDelegate.swift in Sources */,
@@ -262,6 +266,7 @@
 		4E60EB051EC4586400A466ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KVVYS4U5HE;
 				INFOPLIST_FILE = KBSwiftProgressHUD/Info.plist;
@@ -275,6 +280,7 @@
 		4E60EB061EC4586400A466ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KVVYS4U5HE;
 				INFOPLIST_FILE = KBSwiftProgressHUD/Info.plist;

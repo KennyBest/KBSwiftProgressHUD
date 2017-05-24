@@ -9,7 +9,6 @@
 import UIKit
 
 class KBIndefiniteAnimationView: UIView {
-
     
     var radius: CGFloat = 40.0 {
         didSet {
@@ -55,16 +54,15 @@ class KBIndefiniteAnimationView: UIView {
             self.layer.addSublayer(shapeLayer)
         }
         
-        
         return shapeLayer
     }()
     
     func addAnimationForIndefinteAnimatedLayer(layer: CAShapeLayer) -> Void {
         let maskLayer = CALayer()
         
-        let path = Bundle.main.path(forResource: "angle-mask", ofType: "png")
-        
-        maskLayer.contents = UIImage.init(contentsOfFile: path ?? "")?.cgImage
+//        let path = Bundle.main.path(forResource: "angle-mask", ofType: "png")
+        let image = UIImage(named: "angle-mask")
+        maskLayer.contents = image!.cgImage
         maskLayer.frame = layer.bounds
         layer.mask = maskLayer
         
@@ -77,14 +75,15 @@ class KBIndefiniteAnimationView: UIView {
         animation.duration = animationDuration
         animation.timingFunction = linearCurve
         animation.isRemovedOnCompletion = false
-        animation.repeatCount = 0
+        // 无限循环
+        animation.repeatCount = Float.infinity
         animation.fillMode = kCAFillModeForwards
         animation.autoreverses = false
         layer.mask?.add(animation, forKey: "rotate")
         
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = animationDuration
-        animationGroup.repeatCount = 0
+        animationGroup.repeatCount = Float.infinity
         animationGroup.timingFunction = linearCurve
         
         let strokeStartAnimation = CABasicAnimation(keyPath: "strokeStart")
@@ -105,7 +104,9 @@ class KBIndefiniteAnimationView: UIView {
         let x = self.bounds.width - layer.bounds.width / 2 - widthDiff / 2
         let y = self.bounds.height - layer.bounds.height / 2 - heightDiff / 2
         
-        layer.position = CGPoint(x: x, y: y)
+        self.indefiniteAnimatedLayer.position = CGPoint(x: x, y: y)
+        
+        //TODO: 设置一个view的layer的position等同于设置view自身的positon
     }
     
     

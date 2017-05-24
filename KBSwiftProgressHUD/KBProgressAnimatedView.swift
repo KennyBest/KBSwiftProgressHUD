@@ -80,3 +80,4 @@ class KBProgressAnimatedView: UIView {
 func ==(lhs: CGRect, rhs: CGRect) -> Bool {
     return __CGSizeEqualToSize(lhs.size, rhs.size) && __CGPointEqualToPoint(lhs.origin, rhs.origin)
 }
+
